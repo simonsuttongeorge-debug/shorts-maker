@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyboard – El Chamo short (Local Tenerife)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#286181;--yellow:#FFBF31;--blue:#72D4F5;--ink:#14212b;--mute:#5b6b77;--line:#e3e8ec;--bg:#f6f8fa}
+*{box-sizing:border-box}body{margin:0;font-family:Montserrat,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+header{background:var(--navy);color:#fff;padding:22px 18px 18px}
+header h1{font-family:Oswald,sans-serif;font-weight:600;font-size:26px;margin:0 0 4px;letter-spacing:.3px}
+header p{margin:0;opacity:.85;font-size:14px}
+.wrap{max-width:860px;margin:0 auto;padding:16px}
+.tabs{display:flex;gap:8px;margin:4px 0 12px}
+.tabs button{flex:1;border:2px solid var(--navy);background:#fff;color:var(--navy);font:700 14px Montserrat;padding:10px;border-radius:10px;cursor:pointer}
+.tabs button.on{background:var(--navy);color:#fff}
+video{width:100%;max-width:340px;display:block;margin:0 auto;border-radius:14px;background:#000;aspect-ratio:9/16}
+h2{font-family:Oswald,sans-serif;font-weight:600;font-size:20px;margin:26px 0 10px;color:var(--navy)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.scene{display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:start}
+.scene img{width:104px;border-radius:10px;display:block}
+.num{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:900;border-radius:6px;padding:1px 8px;font-size:13px;margin-right:6px}
+.tc{color:var(--mute);font-size:12px;font-weight:700}
+.say{margin:6px 0 4px;font-size:14px}
+.es{color:var(--mute);font-size:13px;font-style:italic;margin:0 0 6px}
+.gfx{font-size:13px;background:#eef6fa;border-left:4px solid var(--navy);padding:6px 8px;border-radius:6px}
+.flag{background:#fff6e0;border-left:4px solid var(--yellow)}
+ul{padding-left:18px;margin:6px 0}li{margin:4px 0;font-size:14px}
+.small{font-size:12px;color:var(--mute)}
+.pair{display:flex;gap:8px;margin-top:8px}.pair img{width:50%;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>El Chamo – storyboard for approval</h1>
+<p>Local Tenerife · 46s raw + 4.5s kitchen clip → 21.9s edited (19.7s + 2.2s end card) · <b>v2</b> · English + Spanish versions</p>
+</header>
+<div class="wrap">
+
+<div class="tabs"><button id="bEn" class="on">English preview</button><button id="bEs">Versión en español</button></div>
+<video id="vid" src="preview_en.mp4" controls playsinline preload="metadata"></video>
+<p class="small" style="text-align:center">Low-res preview. The final render is 1080×1920 and looks sharper.</p>
+
+<h2>Changes in v2</h2>
+<div class="card flag"><ul><li>El Chamo and <i>ustedes</i> confirmed.</li><li>"but" removed (scene 4).</li><li>Repeated words at 0:14 removed (scene 5).</li><li>Your kitchen clip added under "have a quick look around" (scene 6). Its own sound is muted.</li></ul></div>
+<h2>What I cut</h2>
+<div class="card"><ul>
+<li>The first take of the opening (0:02–0:08) and a 9-second gap before the second take. I kept the second take because it ran on without stopping.</li>
+<li>The repeated ending "…so just have a quick look around now". The video now ends on "some people are arriving now".</li>
+<li>Pauses longer than about ⅓ of a second.</li><li><b>v2:</b> "but" removed from "typical Spanish, it's really lovely food".</li><li><b>v2:</b> the false start at 0:14 ("we've been… we bring our family") removed.</li>
+<li>Every other section has a slight zoom-in (8%) to hide the jump cuts.</li>
+</ul></div>
+
+<h2>Scenes</h2>
+
+<div class="card scene"><img src="en_0.8.jpg" alt="Scene 1"><div>
+<span class="num">1</span><span class="tc">0:00–0:02 · Hook</span>
+<p class="say">"I'm going to let you into a bit of a secret now."</p>
+<p class="es">Les voy a contar un pequeño secreto.</p>
+<div class="gfx">Title behind your head: <b>OUR LITTLE / SECRET</b> · ES: <b>NUESTRO / SECRETO</b></div>
+<div class="pair"><img src="es_0.8.jpg" alt="Scene 1 Spanish"></div>
+</div></div>
+
+<div class="card scene"><img src="en_4.6.jpg" alt="Scene 2"><div>
+<span class="num">2</span><span class="tc">0:02–0:06 · The place</span>
+<p class="say">"One of the restaurants that Ana and I really love is El Chamo, it's in La Escalona"</p>
+<p class="es">Uno de los restaurantes que más nos gustan a Ana y a mí es El Chamo, está en La Escalona</p>
+<div class="gfx">Location card slides in: 📍 <b>El Chamo</b> · La Escalona, Tenerife</div>
+</div></div>
+
+<div class="card scene"><img src="en_8.0.jpg" alt="Scene 3"><div>
+<span class="num">3</span><span class="tc">0:06–0:10</span>
+<p class="say">"…and look at it from the outside, it does not do it any justice at all"</p>
+<p class="es">y por fuera no le hace ninguna justicia</p>
+<div class="gfx">Captions only</div>
+</div></div>
+
+<div class="card scene"><img src="en_10.6.jpg" alt="Scene 4"><div>
+<span class="num">4</span><span class="tc">0:10–0:12</span>
+<p class="say">"It's typical Spanish, it's really, really lovely food."</p>
+<p class="es">Es comida típica española, de verdad que está buenísima.</p>
+<div class="gfx">Label with plate icon: <b>Typical Spanish food</b> · ES: <b>Comida típica española</b></div>
+<div class="pair"><img src="es_10.6.jpg" alt="Scene 4 Spanish"></div>
+</div></div>
+
+<div class="card scene"><img src="en_14.2.jpg" alt="Scene 5"><div>
+<span class="num">5</span><span class="tc">0:12–0:16</span>
+<p class="say">"We've been here loads of times, we bring our family and friends here all the time as well."</p>
+<p class="es">Hemos venido un montón de veces, y siempre traemos aquí a la familia y a los amigos.</p>
+<div class="gfx">Captions only</div>
+</div></div>
+
+<div class="card scene"><img src="en_18.5.jpg" alt="Scene 6"><div>
+<span class="num">6</span><span class="tc">0:16–0:19.7</span>
+<p class="say">"So have a quick look around, they're just about to open, some people are arriving now."</p>
+<p class="es">Así que echen un vistazo, están a punto de abrir, ya está llegando gente.</p>
+<div class="gfx">Cuts to your <b>kitchen clip</b> (cook with the plate) while you keep talking · label with clock icon: <b>Opening soon</b> · ES: <b>A punto de abrir</b></div><div class="pair"><img src="es_18.5.jpg" alt="Scene 6 Spanish"></div>
+</div></div>
+
+<div class="card scene"><img src="en_20.9.jpg" alt="Scene 7"><div>
+<span class="num">7</span><span class="tc">0:19.7–0:22 · End card</span>
+<p class="say">LT badge · "More local secrets every week" · localtenerife.com</p>
+<p class="es">Más secretos locales cada semana</p>
+<div class="pair"><img src="es_20.9.jpg" alt="Scene 7 Spanish"></div>
+</div></div>
+
+<h2>How to give feedback</h2>
+<div class="card"><p style="margin:0;font-size:14px">Reply in the chat with the scene number, e.g. <i>"3: add a graphic"</i> or <i>"captions smaller"</i>. When you're happy, say <b>approve</b>. I'll then render both versions at full quality and send them back for a final look before anything is posted.</p></div>
+
+</div>
+<script>
+const v=document.getElementById('vid'),be=document.getElementById('bEn'),bs=document.getElementById('bEs');
+function set(l){v.src='preview_'+l+'.mp4';be.classList.toggle('on',l==='en');bs.classList.toggle('on',l==='es');}
+be.onclick=()=>set('en');bs.onclick=()=>set('es');
+</script>
+</body>
+</html>
