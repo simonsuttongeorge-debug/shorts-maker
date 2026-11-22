@@ -1,0 +1,40 @@
+{
+  "id": "lt",
+  "name": "Local Tenerife",
+  "colors": {
+    "blue": "#72D4F5",
+    "yellow": "#FFBF31",
+    "navy": "#286181",
+    "black": "#010100",
+    "white": "#FFFFFF"
+  },
+  "captions": {
+    "font": "Montserrat",
+    "weight": "Black",
+    "base_color": "#FFFFFF",
+    "highlight_color": "#FFBF31",
+    "outline_color": "#000000"
+  },
+  "titles": {
+    "font": "Oswald",
+    "weight": "Bold",
+    "color": "#FFBF31",
+    "behind_head": true
+  },
+  "graphics": {
+    "panel_color": "#286181",
+    "accent_color": "#FFBF31",
+    "secondary_color": "#72D4F5",
+    "text_color": "#FFFFFF"
+  },
+  "logo": {
+    "badge": "logo_badge_transparent.png"
+  },
+  "blotato": {
+    "youtube": null,
+    "facebook": {"accountId": "62453", "pageId": "936286289571526"},
+    "instagram": {"accountId": "85628"},
+    "tiktok": null,
+    "linkedin": null
+  }
+}

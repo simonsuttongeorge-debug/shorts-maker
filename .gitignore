@@ -1,0 +1,6 @@
+models/
+__pycache__/
+*.mp4
+*.mov
+work/
+preview_*.png

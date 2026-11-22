@@ -1,0 +1,38 @@
+{
+  "id": "tpg",
+  "name": "Tenerife Property Group",
+  "colors": {
+    "gold": "#CBB26A",
+    "dark": "#333333",
+    "black": "#000000",
+    "white": "#FFFFFF"
+  },
+  "captions": {
+    "font": "Montserrat",
+    "weight": "Black",
+    "base_color": "#FFFFFF",
+    "highlight_color": "#CBB26A",
+    "outline_color": "#000000"
+  },
+  "titles": {
+    "font": "Limelight",
+    "color": "#CBB26A",
+    "behind_head": true
+  },
+  "graphics": {
+    "panel_color": "#333333",
+    "accent_color": "#CBB26A",
+    "text_color": "#FFFFFF"
+  },
+  "logo": {
+    "gold": "logo_gold_transparent.png",
+    "white": "logo_white_transparent.png"
+  },
+  "blotato": {
+    "youtube": {"accountId": "56268", "playlistId": "PLyKk5fBmKvZ--QIhmsv2s7I7FFHwbYZKk"},
+    "facebook": {"accountId": "62453", "pageId": "198742570151171"},
+    "instagram": {"accountId": "83658"},
+    "tiktok": {"accountId": "68706"},
+    "linkedin": null
+  }
+}

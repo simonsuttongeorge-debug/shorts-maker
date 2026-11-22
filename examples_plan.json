@@ -1,0 +1,122 @@
+{
+ "brand": "lt",
+ "punch_in": 1.08,
+ "title": {
+  "behind_head": true,
+  "end": 2.2,
+  "en": [
+   "OUR LITTLE",
+   "SECRET"
+  ],
+  "es": [
+   "NUESTRO",
+   "SECRETO"
+  ]
+ },
+ "phrases": [
+  {
+   "from": 0,
+   "to": 11,
+   "es": "Les voy a contar un pequeño secreto."
+  },
+  {
+   "from": 12,
+   "to": 24,
+   "es": "Uno de los restaurantes que más nos gustan a Ana y a mí es El Chamo,"
+  },
+  {
+   "from": 25,
+   "to": 28,
+   "es": "está en La Escalona"
+  },
+  {
+   "from": 29,
+   "to": 44,
+   "es": "y por fuera no le hace ninguna justicia,"
+  },
+  {
+   "from": 45,
+   "to": 52,
+   "es": "es comida típica española, de verdad que está buenísima."
+  },
+  {
+   "from": 53,
+   "to": 58,
+   "es": "Hemos venido un montón de veces,"
+  },
+  {
+   "from": 59,
+   "to": 70,
+   "es": "y siempre traemos aquí a la familia y a los amigos."
+  },
+  {
+   "from": 71,
+   "to": 76,
+   "es": "Así que echen un vistazo,"
+  },
+  {
+   "from": 77,
+   "to": 81,
+   "es": "están a punto de abrir,"
+  },
+  {
+   "from": 82,
+   "to": 86,
+   "es": "ya está llegando gente."
+  }
+ ],
+ "graphics": [
+  {
+   "type": "pin",
+   "at_word": 23,
+   "until_word": 28,
+   "hold": 1.2,
+   "en": [
+    "El Chamo",
+    "La Escalona, Tenerife"
+   ],
+   "es": [
+    "El Chamo",
+    "La Escalona, Tenerife"
+   ]
+  },
+  {
+   "type": "chip",
+   "icon": "food",
+   "at_word": 46,
+   "until_word": 52,
+   "hold": 0.3,
+   "en": "Typical Spanish food",
+   "es": "Comida típica española"
+  },
+  {
+   "type": "chip",
+   "icon": "clock",
+   "at_word": 78,
+   "until_word": 86,
+   "hold": 0.3,
+   "en": "Opening soon",
+   "es": "A punto de abrir"
+  }
+ ],
+ "endcard": {
+  "dur": 2.2,
+  "en": [
+   "More local secrets",
+   "every week"
+  ],
+  "es": [
+   "Más secretos locales",
+   "cada semana"
+  ],
+  "url": "localtenerife.com"
+ },
+ "broll": [
+  {
+   "file": "broll1.mp4",
+   "at_word": 71,
+   "until_word": 86,
+   "offset": 0.0
+  }
+ ]
+}
