@@ -32,9 +32,18 @@
   },
   "blotato": {
     "youtube": null,
-    "facebook": {"accountId": "62453", "pageId": "936286289571526"},
-    "instagram": {"accountId": "85628"},
+    "facebook": {
+      "accountId": "62453",
+      "pageId": "936286289571526"
+    },
+    "instagram": {
+      "accountId": "85628"
+    },
     "tiktok": null,
-    "linkedin": null
+    "linkedin": {
+      "accountId": "43546",
+      "personal_only": true,
+      "note": "confirm with Simon whether LT shorts go to his personal LinkedIn"
+    }
   }
 }

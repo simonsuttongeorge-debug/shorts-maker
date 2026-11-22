@@ -29,10 +29,26 @@
     "white": "logo_white_transparent.png"
   },
   "blotato": {
-    "youtube": {"accountId": "56268", "playlistId": "PLyKk5fBmKvZ--QIhmsv2s7I7FFHwbYZKk"},
-    "facebook": {"accountId": "62453", "pageId": "198742570151171"},
-    "instagram": {"accountId": "83658"},
-    "tiktok": {"accountId": "68706"},
-    "linkedin": null
+    "youtube": {
+      "accountId": "56268",
+      "playlistId": "PLyKk5fBmKvZ--QIhmsv2s7I7FFHwbYZKk"
+    },
+    "facebook": {
+      "accountId": "62453",
+      "pageId": "198742570151171"
+    },
+    "instagram": {
+      "accountId": "83658"
+    },
+    "tiktok": {
+      "accountId": "68706"
+    },
+    "linkedin": {
+      "accountId": "43546",
+      "pageId": "28660199",
+      "personal": {
+        "accountId": "43546"
+      }
+    }
   }
 }
