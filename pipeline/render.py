@@ -29,7 +29,7 @@ def ease_back(x):
     return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2
 
 # ---------- caption building ----------
-GLUE = {"la", "el", "los", "las", "de", "del", "the", "a", "an", "to", "of", "in", "y", "and", "un", "una"}
+GLUE = {"la", "el", "los", "las", "de", "del", "the", "a", "an", "to", "of", "in", "y", "and", "un", "una", "or", "o", "e", "u", "en", "con", "que", "por", "para", "al"}
 def chunk_words(words, max_words=3, max_chars=16):
     chunks, cur = [], []
     for i, w in enumerate(words):
@@ -110,6 +110,24 @@ def icon(d, kind, cx, cy, s, col, bg):
         d.ellipse((cx - s * .55, cy - s * .55, cx + s * .55, cy + s * .55), outline=col, width=lw)
         d.line((cx, cy, cx, cy - s * .35), fill=col, width=lw)
         d.line((cx, cy, cx + s * .28, cy + s * .1), fill=col, width=lw)
+    elif kind == "doc":  # checklist / paperwork
+        lw = max(2, int(s * .09))
+        d.rounded_rectangle((cx - s * .42, cy - s * .58, cx + s * .42, cy + s * .58), radius=s * .08, outline=col, width=lw)
+        for i, yy in enumerate((-.28, .02, .32)):
+            d.line((cx - s * .26, cy + s * yy, cx - s * .16, cy + s * (yy + .1)), fill=col, width=lw)
+            d.line((cx - s * .16, cy + s * (yy + .1), cx - s * .02, cy + s * (yy - .08)), fill=col, width=lw)
+            d.line((cx + s * .06, cy + s * yy, cx + s * .28, cy + s * yy), fill=col, width=lw)
+    elif kind == "euro":
+        lw = max(2, int(s * .1))
+        d.arc((cx - s * .5, cy - s * .55, cx + s * .5, cy + s * .55), 40, 320, fill=col, width=lw)
+        d.line((cx - s * .65, cy - s * .12, cx + s * .1, cy - s * .12), fill=col, width=lw)
+        d.line((cx - s * .65, cy + s * .14, cx + s * .1, cy + s * .14), fill=col, width=lw)
+    elif kind == "key":
+        lw = max(2, int(s * .11))
+        d.ellipse((cx - s * .6, cy - s * .3, cx - s * .0, cy + s * .3), outline=col, width=lw)
+        d.line((cx, cy, cx + s * .62, cy), fill=col, width=lw)
+        d.line((cx + s * .45, cy, cx + s * .45, cy + s * .25), fill=col, width=lw)
+        d.line((cx + s * .28, cy, cx + s * .28, cy + s * .2), fill=col, width=lw)
 
 def draw_graphic(img, k, g, t, brand, lang):
     gc = brand["graphics"]

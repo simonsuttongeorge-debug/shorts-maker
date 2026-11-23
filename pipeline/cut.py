@@ -8,18 +8,25 @@ import json, subprocess, sys, os
 
 def main(src, edit_path, out):
     ed = json.load(open(edit_path))
-    segs = ed["segments"]
+    # snap to the 30fps grid so video and audio lengths match exactly (no caption drift)
+    segs = [[round(s * 30) / 30, round(e * 30) / 30] for s, e in ed["segments"]]
     os.makedirs(out, exist_ok=True)
-    parts = []
+    # Render each segment separately, then concat. A single filter graph with many
+    # trims of a 1080x1920 source runs out of memory on small machines (SIGKILL).
+    tmp = os.path.join(out, "_segs"); os.makedirs(tmp, exist_ok=True)
+    lst = []
     for i, (s, e) in enumerate(segs):
         d = e - s
-        parts.append(f"[0:v]trim={s}:{e},setpts=PTS-STARTPTS[v{i}];"
-                     f"[0:a]atrim={s}:{e},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,afade=t=out:st={max(d-0.03,0)}:d=0.03[a{i}];")
-    cat = "".join(f"[v{i}][a{i}]" for i in range(len(segs))) + f"concat=n={len(segs)}:v=1:a=1[v][a0];[a0]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
-    fc = "".join(parts) + cat
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
-                    "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-c:a", "aac", "-b:a", "192k",
-                    os.path.join(out, "cut.mp4")], check=True)
+        f = os.path.join(tmp, f"s{i:03d}.mp4")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{s:.3f}", "-i", src, "-t", f"{d:.3f}",
+                        "-af", f"afade=t=in:d=0.02,afade=t=out:st={max(d-0.03,0):.3f}:d=0.03",
+                        "-r", "30", "-frames:v", str(round(d * 30)), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16",
+                        "-c:a", "pcm_s16le", "-ar", "48000", f.replace(".mp4", ".mov")], check=True)
+        lst.append(f"file '{os.path.abspath(f.replace('.mp4', '.mov'))}'")
+    open(os.path.join(tmp, "list.txt"), "w").write("\n".join(lst) + "\n")
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", os.path.join(tmp, "list.txt"),
+                    "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000",
+                    "-c:a", "aac", "-b:a", "192k", os.path.join(out, "cut.mp4")], check=True)
     # remap words
     out_words, offset, seg_index = [], 0.0, []
     for i, (s, e) in enumerate(segs):
