@@ -49,6 +49,10 @@
       "personal": {
         "accountId": "43546"
       }
+    },
+    "languages": {
+      "default": "en",
+      "note": "English-only captions on every TPG destination (Simon, Nov 2026); no Spanish version posted"
     }
   },
   "endcard": {
